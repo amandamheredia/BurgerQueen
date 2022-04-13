@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.menu-header {
+  background-color: #fff3e2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  float: top left;
+}
+
+
