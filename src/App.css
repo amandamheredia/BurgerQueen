@@ -1,5 +1,21 @@
-.App {
+@font-face {
+  font-family: 'Now-Bold';
+  src: local('Now-Bold'), url(./Now-Bold.otf) format('otf');
+}
+
+.Home {
   text-align: center;
+}
+
+.bienvenida {
+  font-family: 'Now-Bold';
+  color: #d86262;
+
+}
+
+.modo {
+  font-family: 'Now-Bold';
+  color: #d86262;
 }
 
 .menu-header {
@@ -11,6 +27,26 @@
   justify-content: center;
   font-size: 60px;
   float: top left;
+}
+
+.mesas-button {
+  font-family: 'Now-Bold';
+  font-size: 50px;
+  background-color: #d2dfbb;
+  border-color: #778656;
+  color: #d86262;
+  width: 20%;
+  padding: 30px;
+}
+
+.cocina-button {
+  font-family: 'Now-Bold';
+  font-size: 50px;
+  background-color: #d2dfbb;
+  border-color: #778656;
+  color: #d86262;
+  width: 20%;
+  padding: 30px;
 }
 
 

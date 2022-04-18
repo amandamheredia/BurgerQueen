@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 // import Mesas from './mesas';
-import App from './App'
+import Home from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -4,12 +4,12 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 import Mesas from './mesas.js';
 
 
-export default function App() {
+export default function Home() {
   return (
     <div className="menu-container">
       <header className="menu-header">
-        <p>
-          ¡Bienvenida al menu de Burger Queen!
+        <p className='bienvenida'>
+          ¡Bienvenida a Burger Queen!
         </p>
 
          <button className= "mesas-button">Mesas</button>
@@ -18,7 +18,7 @@ export default function App() {
         {/* <Link to="mesas" className='mesas'>Mesas</Link>
         <Link to="cocina" className='cocina'>Cocina</Link> */}
 
-        <p>Elige el modo que necesitas</p>
+        <p className='modo'>Elige el modo que necesitas</p>
         {/* <Routes>
         <Route path="/" element={<Layout />}>
         <Route path="mesas" element={<Mesas />} />
