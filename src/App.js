@@ -1,58 +1,43 @@
-import './App.css';
-import './mesas.js';
-import { Routes, Route, Link, Outlet } from "react-router-dom";
-import Mesas from './mesas.js';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from './Home.jsx';
+// import Mesas from './mesas.jsx';
+// import Cocina from './cocina.jsx';
 
 
-export default function Home() {
+function App () {
   return (
-    <div className="menu-container">
-      <header className="menu-header">
-        <p className='bienvenida'>
-          ¡Bienvenida a Burger Queen!
-        </p>
+    <div className="App">
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/mesas" element={<Mesas />} />
+<Route path="/cocina" element={<Cocina/>} />
+</Routes>
+</div>
+  )
+}
 
-         <button className= "mesas-button">Mesas</button>
-         <button className= "cocina-button">Cocina</button>
-         
-        {/* <Link to="mesas" className='mesas'>Mesas</Link>
-        <Link to="cocina" className='cocina'>Cocina</Link> */}
+export default App;
 
-        <p className='modo'>Elige el modo que necesitas</p>
-        {/* <Routes>
-        <Route path="/" element={<Layout />}>
-        <Route path="mesas" element={<Mesas />} />
-        </Route>
-      </Routes> */}
-      </header>
+function Mesas() {
+  return (
+    <div>
+      <p>Hola estas son las mesas</p>
     </div>
   );
 }
 
-// function Layout() {
-//   return (
-//     <div>
-//       {/* A "layout route" is a good place to put markup you want to
-//           share across all the pages on your site, like navigation. */}
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="mesas">Mesas</Link>
-//           </li>
-//           <li>
-//             <Link to="/cocina">Cocina</Link>
-//           </li>
-//         </ul>
-//       </nav>
-
-//       <hr />
-
-//       {/* An <Outlet> renders whatever child route is currently active,
-//           so you can think about this <Outlet> as a placeholder for
-//           the child routes we defined above. */}
-//       <Outlet />
-//     </div>
-//   );
-// }
+function Cocina () {
+  return (
+    <div>
+        <p>Hola esta es la cocina</p>
+    </div>
+    
+  );
+}
 
 
+
+
+
+      

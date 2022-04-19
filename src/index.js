@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-// import Mesas from './mesas';
-import Home from './App'
+import App from './App'
+// import Home from './Home'
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
