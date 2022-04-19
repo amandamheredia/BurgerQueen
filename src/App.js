@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from './Home.jsx';
-// import Mesas from './mesas.jsx';
-// import Cocina from './cocina.jsx';
+import Home from './Home.js';
+import Mesas from './mesas.js';
+import Cocina from './cocina.js';
 
 
 function App () {
@@ -19,22 +19,6 @@ function App () {
 
 export default App;
 
-function Mesas() {
-  return (
-    <div>
-      <p>Hola estas son las mesas</p>
-    </div>
-  );
-}
-
-function Cocina () {
-  return (
-    <div>
-        <p>Hola esta es la cocina</p>
-    </div>
-    
-  );
-}
 
 
 
