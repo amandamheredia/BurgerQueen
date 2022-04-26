@@ -40,7 +40,8 @@
 }
 
 .mesas-container,
-.cocina-container {
+.cocina-container,
+.breakfast-list {
   background-color: #fff3e2;
   min-height: 100vh;
   display: flex;

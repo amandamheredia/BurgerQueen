@@ -1,0 +1,66 @@
+{
+    "menu": [
+
+    {
+      "id": "1",
+      "plato": "Café americano",
+      "precio": "$5",
+      "horario": "Desayuno"
+    },
+
+    {
+        "id": "2",
+        "plato": "Café con leche",
+        "precio": "$7",
+        "horario": "Desayuno"
+    },
+    {
+        "id": "3",
+        "plato": "Jugo de frutas",
+        "precio": "$7",
+        "horario": "Desayuno"
+    },
+    {
+        "id": "4",
+        "plato": "Aliado",
+        "precio": "$10",
+        "horario": "Desayuno"
+    },
+    {
+        "id": "5",
+        "plato": "Hamburguesa simple",
+        "precio": "$10",
+        "horario": "Almuerzo y cena"
+    },
+    {
+        "id": "6",
+        "plato": "Hamburguesa doble",
+        "precio": "$15",
+        "horario": "Almuerzo y cena"
+    },
+    {
+        "id": "7",
+        "plato": "Papas fritas",
+        "precio": "$5",
+        "horario": "Almuerzo y cena"
+    },
+    {
+        "id": "8",
+        "plato": "Aros de cebolla",
+        "precio": "$5",
+        "horario": "Almuerzo y cena"
+    },
+    {
+        "id": "9",
+        "plato": "Agua 500ml",
+        "precio": "$5",
+        "horario": "Almuerzo y cena"
+    },
+    {
+        "id": "10",
+        "plato": "Bebida 500ml",
+        "precio": "$5",
+        "horario": "Almuerzo y cena"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import './App.css';
 
-function Cocina () {
+function Kitchen () {
     return (
       <div className='cocina-container'>
           <p className='top-cocina'>Cocina</p>
@@ -9,4 +9,4 @@ function Cocina () {
     );
   }
 
-  export default Cocina;
+  export default Kitchen;
