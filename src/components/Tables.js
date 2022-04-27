@@ -1,4 +1,3 @@
-// import { render } from '@testing-library/react';
 import { React, useEffect, useState } from 'react';
 import menu from "../data/menu.json";
 import './App.css';
@@ -8,17 +7,7 @@ import './App.css';
 
 export default function Tables () {
 
-  const [productos, setProductos] = useState()
-  const datamenu = menu.menu 
-
-  // console.log(datamenu)
-  // const [plato, setPlato] = useState()
-  // const [comida, setComida] = useState ({
-  //     "id": "",
-  //     "plato": "",
-  //     "precio": "",
-  //     "horario": ""
-  // })
+  const [comida, setComida] = useState(menu.menu)
   
   useEffect (() =>{
    fetch("menu.json")
@@ -26,30 +15,51 @@ export default function Tables () {
      console.log(response.json)
      return response.json()
    })
-   .then((productos) => {
+   .then(() => {
     console.log(menu)
-    setProductos(menu)
-    // setPlato(menu.menu[0].plato)
-    // setComida({
-    //   "id": "",
-    //   "plato": menu.menu[0].plato,
-    //   "precio": "",
-    //   "horario": "" })
+    setComida(menu)
   })
   }, [])
 
-
+ const desayuno = comida.filter (plato => plato.horario === 'Desayuno')
+ const almuerzo = comida.filter (plato => plato.horario === 'Almuerzo y cena')
 
   return (
     <div className="mesas-container">
-      <p className='desayuno'>Desayuno</p>
-      <p className='desayuno-items'>
-        {datamenu.map(item => (
-          <li key={item.id}>
-            {item.plato} {item.precio} 
-          </li>
+
+      <header className='top-mesas'>Mesas</header> 
+
+      <section className='desayuno'>
+
+      <p className='desayuno-header'>Desayuno</p>
+      
+         <ul>
+         {desayuno.map(item => (
+          <button className='boton-item' key={item.id}>
+            {item.plato} {item.precio}
+          </button>
+         ))}
+         </ul>
+      
+      </section>
+
+      <section className='almuerzo'>
+
+      <header className='almuerzo-header'>Almuerzo y Cena</header>
+  
+       <ul>
+        {almuerzo.map(item => (
+          <button className='boton-item' key={item.id}>
+            {item.plato} {item.precio}
+          </button>
         ))}
-      </p>
+        </ul>
+      
+      </section>
+
+      <section className='pedido'>
+        <header className='total-header'>Total</header>
+      </section>
     </div>
   );
 
