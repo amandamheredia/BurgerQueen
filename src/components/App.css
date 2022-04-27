@@ -37,6 +37,8 @@
   color: #d86262;
   width: 50%;
   padding: 30px;
+  /* border-radius: 60px; */
+  margin-right: 20px;
 }
 
 .mesas-container,
@@ -51,6 +53,19 @@
   float: top;
 }
 
+.desayuno {
+  display: flex;
+  align-items: left;
+  gap: 30px;
+}
+
+.almuerzo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
 .top-mesas, 
 .top-cocina,
 .desayuno-header,
@@ -60,11 +75,26 @@
   font-family: 'Now-Bold';
   font-size: 50px;
   color: #d86262;
-  float: top center;
+  float: center;
+  margin-bottom: 100px;
 }
 
  
-.boton-item {
+.boton-item-d {
+  font-family: 'Now-Bold';
+  font-size: 20px;
+  color: #d86262;
+  background-color: #d2dfbb;
+  border-radius: 60px;
+  width: 20%;
+  padding: 15px;
+  text-align: center;
+  align-items: left;
+
+}
+
+.boton-item-a {
+
   font-family: 'Now-Bold';
   font-size: 20px;
   color: #d86262;
@@ -74,7 +104,7 @@
   width: 20%;
   padding: 15px;
   text-align: center;
-  gap: 50px;
+  align-items: center;
 }
 
 

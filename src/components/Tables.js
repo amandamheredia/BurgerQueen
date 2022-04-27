@@ -35,7 +35,7 @@ export default function Tables () {
       
          <ul>
          {desayuno.map(item => (
-          <button className='boton-item' key={item.id}>
+          <button className='boton-item-d' key={item.id}>
             {item.plato} {item.precio}
           </button>
          ))}
@@ -49,7 +49,7 @@ export default function Tables () {
   
        <ul>
         {almuerzo.map(item => (
-          <button className='boton-item' key={item.id}>
+          <button className='boton-item-a' key={item.id}>
             {item.plato} {item.precio}
           </button>
         ))}
