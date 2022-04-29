@@ -33,11 +33,11 @@
 .cocina-link {
   font-family: 'Now-Bold';
   font-size: 50px;
-  background-color: #d2dfbb;
-  color: #d86262;
+  background-color: #48A1AD;
+  color: #fff3e2;
   width: 50%;
   padding: 30px;
-  /* border-radius: 60px; */
+  border-radius: 30px;
   margin-right: 20px;
 }
 
@@ -54,15 +54,16 @@
 }
 
 .desayuno {
-  display: flex;
-  align-items: left;
-  gap: 30px;
+  display: grid;
+ align-items: left;
+ justify-content: left;
+
 }
 
 .almuerzo {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  display: grid;
+  align-items: right;
+  justify-content: right;
 }
 
 
@@ -71,22 +72,25 @@
 .desayuno-header,
 .almuerzo-header,
 .total-header {
+  display: flex;
   text-decoration: underline;
   font-family: 'Now-Bold';
   font-size: 50px;
   color: #d86262;
-  float: center;
-  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
  
 .boton-item-d {
+  display: grid;
   font-family: 'Now-Bold';
   font-size: 20px;
-  color: #d86262;
-  background-color: #d2dfbb;
+  color: #fff3e2;
+  background-color: #48A1AD;
   border-radius: 60px;
-  width: 20%;
+  width: 90%;
   padding: 15px;
   text-align: center;
   align-items: left;
@@ -94,17 +98,26 @@
 }
 
 .boton-item-a {
-
+  display: grid;
   font-family: 'Now-Bold';
   font-size: 20px;
-  color: #d86262;
+  color: #fff3e2;
   float: top center;
-  background-color: #d2dfbb;
+  background-color: #48A1AD;
   border-radius: 60px;
-  width: 20%;
+  width: 80%;
   padding: 15px;
   text-align: center;
   align-items: center;
+}
+
+.nota-pedido {
+  width: 500px;
+}
+
+.boton-basurero {
+  width: 20px;
+  
 }
 
 
