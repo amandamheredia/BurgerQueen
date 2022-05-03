@@ -1,15 +1,17 @@
-import { createElement, React, useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import menu from "../data/menu.json";
-import eliminar  from './../assets/img/eliminar.png'
+import eliminar  from './../assets/img/eliminar.png' 
 import './App.css';
 
 
 export default function Tables () {
 
-  //FUNCION PARA TRAER LOS OBJETOS DE MENU.JSON
+  //ESTADO DE LA COMIDA
   const [comida, setComida] = useState(menu.menu)
-  //FUNCION PARA SUMAR Y BORRAR 
-  const [total, setTotal] = useState(() => totalInicial())
+  //ESTADO DEL TOTAL
+  // const [total, setTotal] = useState(() => totalInicial())
+  //ESTADO DEL CARRITO
+  const [cart, setCart] = useState ([])
   
   
   useEffect (() =>{
@@ -24,32 +26,32 @@ export default function Tables () {
   })
   }, [])
 
-  function totalInicial () {
-    console.log ('hola lesbianas de chile')
+  // function totalInicial () {
+  //   console.log ('hola lesbianas de chile')
   
-    return (
+  //   return (
+  //     0
+  //   )
+  //   }
 
-      0
-  
-    // {desayuno.map(objeto => (
-    //   <p {...totalInicial} className='total-inicial' key={objeto.id}>
-    //     {objeto.plato}
-    //   </p>
-    //  ))}
-  
-    )
-    }
+  // function borrarItem () {
 
+  //   setTotal(prevItem => prevItem - 1)  
+  // }
 
-  function borrarItem () {
+  // function agregarItem () {
+   
+  //   setTotal(prevItem => prevItem + 1) 
+    
+  // }
 
-    setTotal(prevItem => prevItem - 1)  
+  const addToCart = (item) => {
+    console.log("estamos en el carrito")
+    setCart([...cart, {...item}])
   }
 
-  function agregarItem () {
-   
-    setTotal(prevItem => prevItem + 1) 
-    
+  const removeFromCart = (productToRemove) => {
+    setCart(cart.filter((item) => item !== productToRemove))
   }
 
  const desayuno = comida.filter (plato => plato.horario === 'Desayuno')
@@ -67,8 +69,9 @@ export default function Tables () {
       
          <ul>
          {desayuno.map(item => (
-          <button onClick={agregarItem} className='boton-item-d' key={item.id}>
-            {item.plato} {item.precio}
+          <button onClick={() => addToCart(item)} className='boton-item-d' key={item.id}>
+            {item.plato} 
+            {item.precio}
           </button>
          ))}
          </ul>
@@ -81,8 +84,9 @@ export default function Tables () {
   
        <ul>
         {almuerzo.map(item => (
-          <button onClick={agregarItem} className='boton-item-a' key={item.id}>
-            {item.plato} {item.precio}
+          <button onClick={() => addToCart(item)} className='boton-item-a' key={item.id}>
+            {item.plato}
+            {item.precio}
           </button>
         ))}
         </ul>
@@ -90,12 +94,20 @@ export default function Tables () {
       </section>
 
       <section className='pedido'>
-        <header className='total-header'>Total</header>
+        <header className='total-header'>Pedido ({cart.length})</header>
 
-        <span>{total}</span>
-        
+        {cart.map((item) => (
+          <div className='pedidos' key={item}>
+            {item.plato}
+            {item.precio}
+            <button onClick={() => removeFromCart(item)}>Borrar</button>
+          </div>
 
-        <button onClick={borrarItem}> <img className='boton-basurero' src='eliminar'></img></button>
+        ))}
+
+        {/* <span>{total}</span> */}
+
+        {/* <button onClick={}> <img className='boton-basurero' src='eliminar' alt='borrar'></img></button> */}
         
         {/* <img className='nota-pedido' src='https://64.media.tumblr.com/d188740037e1ad3759e515ef57e7269d/bffd6c491df88dba-47/s1280x1920/e81246329eb99aea36cf4a1163feec5a32167940.pnj'></img> */}
       </section>

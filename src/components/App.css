@@ -53,17 +53,12 @@
   float: top;
 }
 
+
+.almuerzo,
 .desayuno {
   display: grid;
- align-items: left;
- justify-content: left;
-
-}
-
-.almuerzo {
-  display: grid;
-  align-items: right;
-  justify-content: right;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
 }
 
 
@@ -81,6 +76,7 @@
   justify-content: center;
   margin-bottom: 30px;
 }
+
 
  
 .boton-item-d {
@@ -107,6 +103,19 @@
   border-radius: 60px;
   width: 80%;
   padding: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.pedidos {
+  display: flex;
+  font-family: 'Now-Bold';
+  font-size: 20px;
+  color: #fff3e2;
+  background-color: #48A1AD;
+  border-radius: 60px;
+  width: 80%;
+  padding: 30px;
   text-align: center;
   align-items: center;
 }
