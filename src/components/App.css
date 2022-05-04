@@ -85,8 +85,7 @@
   font-size: 50px;
   color: #d86262;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 700px;
 }
 
 .desayuno-header,
@@ -186,12 +185,12 @@
 
 /* .nota-pedido {
   width: 500px;
-}
+} */
 
 .boton-basurero {
   width: 20px;
   
-} */
+} 
 
 
 

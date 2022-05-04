@@ -82,12 +82,13 @@ export default function Tables () {
         <header className='total-header'>Pedido ({cart.length})</header>
            
         <p className='nombre-clienta'>Nombre de la clienta: <input className='input-nombre' placeholder=' Escriba nombre aquí'></input></p>
+        {/* <button className='enviar-nombre'>Ok</button> */}
 
         {cart.map((item) => (
           <div className='items-del-pedido' key={item}>
             {item.plato}
             {item.precio}
-            <button onClick={() => removeFromCart(item)}> <img className='boton-basurero' src='eliminar' alt='Borrar'></img></button>
+            <button onClick={() => removeFromCart(item)}> <img className='boton-basurero' src= {eliminar} alt='Borrar'></img></button>
           </div>
         ))}
 
