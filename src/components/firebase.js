@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDJkAiStTJAga4Rr6BINofSfwEnH74E_uM",
@@ -14,18 +15,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const auth = getAuth ()
 
-export const inputName = () => {
+// Add a new document in collection "cities"
+await setDoc(doc(db, "pedidos"), {
+  name: "",
+  pedido: "",
+});
 
- let name = document.getElementById("input-nombre").value
-
- signInWithEmailAndPassword(auth, name)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    
-    // ...
-  })
-
-}

@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import menu from "../data/menu.json";
 import eliminar  from './../assets/img/eliminar.png' 
+import notacarrito  from './../assets/img/notacarrito.png'
 import './App.css';
 
 
@@ -78,11 +79,14 @@ export default function Tables () {
       
       </section>
 
+      <img className='nota-pedido' src= {notacarrito}></img>
+
       <section className='pedido'>
+      
         <header className='total-header'>Pedido ({cart.length})</header>
            
-        <p className='nombre-clienta'>Nombre de la clienta: <input className='input-nombre' placeholder=' Escriba nombre aquí'></input></p>
-        {/* <button className='enviar-nombre'>Ok</button> */}
+        <p className='nombre-clienta'>Nombre de la clienta: <input className='input-nombre'></input></p>
+    
 
         {cart.map((item) => (
           <div className='items-del-pedido' key={item}>
@@ -95,6 +99,8 @@ export default function Tables () {
         <p className='total-pedido'>Total: ${total} </p>
 
         <button className='boton-enviar'>Enviar a cocina</button>
+
+        
 
       </section>
     </div>
