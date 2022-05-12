@@ -28,36 +28,42 @@
     },
     {
         "id": "5",
+        "plato": "Pie de manzana",
+        "precio": "$8",
+        "horario": "Desayuno"
+    },
+    {
+        "id": "6",
         "plato": "Hamburguesa simple",
         "precio": "$10",
         "horario": "Almuerzo y cena"
     },
     {
-        "id": "6",
+        "id": "7",
         "plato": "Hamburguesa doble",
         "precio": "$15",
         "horario": "Almuerzo y cena"
     },
     {
-        "id": "7",
+        "id": "8",
         "plato": "Papas fritas",
         "precio": "$5",
         "horario": "Almuerzo y cena"
     },
     {
-        "id": "8",
+        "id": "9",
         "plato": "Aros de cebolla",
         "precio": "$5",
         "horario": "Almuerzo y cena"
     },
     {
-        "id": "9",
+        "id": "10",
         "plato": "Agua 500ml",
         "precio": "$5",
         "horario": "Almuerzo y cena"
     },
     {
-        "id": "10",
+        "id": "11",
         "plato": "Bebida 500ml",
         "precio": "$5",
         "horario": "Almuerzo y cena"

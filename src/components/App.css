@@ -10,8 +10,13 @@
 }
 
 body {
-  background-color: #fff3e2;
+  background-color: #FFEBCE;
 }
+
+.logo-bq {
+  width: 50px;
+}
+
 
 .bienvenida {
   font-family: 'Now-Bold';
@@ -25,7 +30,7 @@ body {
 }
 
 .menu-container {
-  background-color: #fff3e2;
+  background-color: #FFEBCE;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,7 +54,7 @@ body {
 
 .mesas-container,
 .cocina-container {
-  background-color: #fff3e2;
+  background-color: #FFEBCE;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -214,9 +219,9 @@ body {
 }
 
 .boton-basurero {
-  width: 20px;
-  background-color: transparent;
-  
+  width: 30px;
+  background: none;
+  border: none;
 } 
 
 

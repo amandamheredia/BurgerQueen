@@ -1,7 +1,9 @@
 import { React, useEffect, useState } from 'react';
 import menu from "../data/menu.json";
-import eliminar  from './../assets/img/eliminar.png' 
+import eliminar  from './../assets/img/eliminar.png'
+import borrar  from './../assets/img/borrar.png' 
 import notacarrito  from './../assets/img/notacarrito.png'
+import { guardarPedido } from './firebase';
 import './App.css';
 
 
@@ -11,6 +13,12 @@ export default function Tables () {
   const [comida, setComida] = useState(menu.menu)
   //ESTADO DEL CARRITO
   const [cart, setCart] = useState ([])
+  //ESTADO DEL INPUT
+  const [nombre, setNombre] = useState("")
+
+  function onChange (e) {
+   setNombre(e.target.value)
+  }
   
   useEffect (() =>{
    fetch("menu.json")
@@ -66,7 +74,7 @@ export default function Tables () {
 
       <section className='almuerzo'>
 
-      <header className='almuerzo-header'>Almuerzo y Cena</header>
+      <header className='almuerzo-header'>Almuerzo</header>
   
        <ul>
         {almuerzo.map(item => (
@@ -85,23 +93,21 @@ export default function Tables () {
       
         <header className='total-header'>Pedido ({cart.length})</header>
            
-        <p className='nombre-clienta'>Nombre de la clienta: <input className='input-nombre'></input></p>
+        <p className='nombre-clienta'>Nombre de la clienta: <input className='input-nombre' value={nombre} onChange={onChange}></input></p>
     
 
         {cart.map((item) => (
           <div className='items-del-pedido' key={item}>
             {item.plato}
             {item.precio}
-            <button onClick={() => removeFromCart(item)}> <img className='boton-basurero' src= {eliminar} alt='Borrar'></img></button>
+            <button onClick={() => removeFromCart(item)}> <img className='boton-basurero' src= {borrar} alt={eliminar}></img></button>
           </div>
         ))}
 
         <p className='total-pedido'>Total: ${total} </p>
 
-        <button className='boton-enviar'>Enviar a cocina</button>
-
-        
-
+        <button onClick= {() => guardarPedido(nombre, cart)} className='boton-enviar'>Enviar a cocina</button>
+      
       </section>
     </div>
   );

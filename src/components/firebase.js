@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, Timestamp, getDocs } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -12,13 +12,29 @@ const firebaseConfig = {
   measurementId: "G-P20Z7SQHXK"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+// console.log(db)
 
-// Add a new document in collection "cities"
-await setDoc(doc(db, "pedidos"), {
-  name: "",
-  pedido: "",
-});
+export const guardarPedido = async (nombre, pedido) => {
+  console.log("este es el pedido")
+  const order = await addDoc(collection(db, "pedidos"), {
+      nombre,
+      pedido,
+      status: "Pendiente",
+      createdAt: Timestamp.now(),
+      total: order.reduce((total, item) => total + item.precio, 0)
+  });
+}
+
+// export const getTasks = () => getDocs(collection(db, "pedidos"));
+
+export const muroKitchen = async () => {
+  const querySnapshot = await getDocs(collection(db, "pedidos"));
+
+  return (querySnapshot.data);
+}
+
+
 
