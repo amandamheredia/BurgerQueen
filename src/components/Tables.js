@@ -61,14 +61,14 @@ export default function Tables () {
       <section className='desayuno'>
       <p className='desayuno-header'>Desayuno</p>
       
-         <ul>
+         
          {desayuno.map(item => (
           <button onClick={() => addToCart(item)} className='boton-item-d' key={item.id}>
             {item.plato} 
             {item.precio}
           </button>
          ))}
-         </ul>
+         
       
       </section>
 
@@ -76,14 +76,14 @@ export default function Tables () {
 
       <header className='almuerzo-header'>Almuerzo</header>
   
-       <ul>
+       
         {almuerzo.map(item => (
           <button onClick={() => addToCart(item)} className='boton-item-a' key={item.id}>
             {item.plato}
             {item.precio}
           </button>
         ))}
-        </ul>
+       
       
       </section>
 

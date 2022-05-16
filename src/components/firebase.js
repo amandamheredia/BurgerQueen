@@ -14,8 +14,7 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-// console.log(db)
+export const db = getFirestore(app);
 
 export const guardarPedido = async (nombre, pedido) => {
   console.log("este es el pedido")
@@ -24,17 +23,13 @@ export const guardarPedido = async (nombre, pedido) => {
       pedido,
       status: "Pendiente",
       createdAt: Timestamp.now(),
-      total: order.reduce((total, item) => total + item.precio, 0)
   });
 }
-
-// export const getTasks = () => getDocs(collection(db, "pedidos"));
 
 export const muroKitchen = async () => {
   const querySnapshot = await getDocs(collection(db, "pedidos"));
 
-  return (querySnapshot.data);
+  return querySnapshot.docs;
 }
-
 
 

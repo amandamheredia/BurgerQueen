@@ -196,7 +196,6 @@ body {
   border-radius: 60px;
   width: 20%;
   padding: 8px;
-
   margin-left: 20px;
 }
 
@@ -223,6 +222,91 @@ body {
   background: none;
   border: none;
 } 
+
+/* MEDIA QUERY TABLET */
+
+@media only screen and (max-width: 768px) {
+
+  .desayuno {
+    position: absolute;
+    left: 20px;
+  }
+  
+  .almuerzo {
+    position: absolute;
+    right: 450px;
+
+  }
+
+  .desayuno-header,
+  .almuerzo-header {
+  font-size: 20px;
+  }
+
+  .boton-item-d {
+    font-size: 10px;
+    border-radius: 30px;
+    width: 75%;
+    padding: 7px;
+    align-items: center;
+
+  }
+
+  .boton-item-a {
+    font-size: 10px;
+    border-radius: 30px;
+    width: 75%;
+    padding: 7px;
+    align-items: center;
+
+  }
+
+  .nota-pedido {
+    width: 300px;
+    margin-left: 450px;
+    margin-top: -30px;
+  }
+
+  .total-header {
+    font-size: 20px;
+    margin-left: 80px;
+  }
+
+  .nombre-clienta,
+  .total-pedido {
+    font-size: 15px;
+  }
+
+  .input-nombre {
+    font-size: 15px;
+    border-radius: 30px;
+    width: 20%;
+    padding: 4px;
+    margin-left: 10px;
+  }
+
+  .items-del-pedido {
+    font-size: 5px;
+    border-radius: 50px;
+    width: 40%;
+    padding: 5px;
+
+  }
+
+  .boton-basurero {
+    width: 20px;
+  } 
+
+  .boton-enviar {
+    font-size: 10px;
+    border-radius: 20px;
+    width: 20%;
+    padding: 5px;
+  }
+
+}
+
+
 
 
 
