@@ -85,7 +85,17 @@ body {
 
 /* HEADERS */
 
-.top-mesas, 
+.top-mesas {
+  display: flex;
+  flex-direction: column;
+  text-decoration: underline;
+  font-family: 'Now-Bold';
+  font-size: 50px;
+  color: #d86262;
+  align-items: center;
+
+}
+
 .top-cocina {
   display: flex;
   flex-direction: column;
@@ -94,7 +104,6 @@ body {
   font-size: 50px;
   color: #d86262;
   align-items: center;
-  margin-bottom: 700px;
 }
 
 .desayuno-header,

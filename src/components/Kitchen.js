@@ -4,11 +4,10 @@ import { muroKitchen } from './firebase';
 import { collection, query, orderBy, getDocs } from "firebase/firestore"
 import { useEffect, useRef, useState } from 'react';
 
-function Kitchen(pedido) {
+function Kitchen() {
 
   const [orders, setOrders] = useState([])
   
-
   useEffect(() => {
     const fetchData = async () => {
       const data = await muroKitchen()
@@ -20,13 +19,12 @@ function Kitchen(pedido) {
 
 
   return (
-    <div className='cocina-container'>
+    <div className='order-kitchen'>
       <p className='top-cocina'>Cocina</p>
-      <div className='order-kitchen'>
-        Cliente: {orders.map(element => <p>{element.data().nombre}</p>)}
+        Cliente: {orders.map(element => <li>{element.data().nombre}</li>)}
         {/* { orders.map(item => <p>{element.data()?.pedido?.plato}</p>) } */}
         </div> 
-    </div>
+  
         )};
 export default Kitchen;
 
