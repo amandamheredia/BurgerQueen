@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import menu from "../data/menu.json";
 import eliminar  from './../assets/img/eliminar.png'
 import borrar  from './../assets/img/borrar.png' 
@@ -109,6 +110,11 @@ export default function Tables () {
         <button onClick= {() => guardarPedido(nombre, cart)} className='boton-enviar'>Enviar a cocina</button>
       
       </section>
+      <div className="to-cocina">
+        <Link to="/cocina" className="cocinabtn">
+          Ir a cocina
+        </Link>
+      </div>
     </div>
   );
 

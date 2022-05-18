@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, Timestamp, getDocs } from "firebase/firestore";
-
+import { getFirestore, collection, addDoc, Timestamp, getDocs, updateDoc, doc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDJkAiStTJAga4Rr6BINofSfwEnH74E_uM",
@@ -19,10 +18,10 @@ export const db = getFirestore(app);
 export const guardarPedido = async (nombre, pedido) => {
   console.log("este es el pedido")
   const order = await addDoc(collection(db, "pedidos"), {
-      nombre,
-      pedido,
-      status: "Pendiente",
-      createdAt: Timestamp.now(),
+    nombre,
+    pedido,
+    status: "Pendiente",
+    createdAt: Timestamp.now(),
   });
 }
 
@@ -31,5 +30,12 @@ export const muroKitchen = async () => {
 
   return querySnapshot.docs;
 }
+
+export const completarPedido = async (id, status) => {
+  const updateId = doc(db, "pedidos", id);
+  const pedidoListo = { status: "Listo" }
+  await updateDoc(updateId, pedidoListo);
+  console.log(pedidoListo)
+};
 
 
